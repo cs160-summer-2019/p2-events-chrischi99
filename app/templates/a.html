@@ -21,15 +21,15 @@
 				<h3>Task 1a</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button id = "button" class="btn btn-light float-right">
 					Reset
 				</button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div class="shape-container">
-					<div class="p2-circle bg-purple"></div>
+				<div class="shape-container"> 
+          <div class="p2-circle bg-purple"></div>
 					<div class="p2-circle bg-purple"></div>
 					<div class="p2-circle bg-purple"></div>
 					<div class="p2-circle bg-purple"></div>
@@ -44,12 +44,12 @@
 					<div class="p2-circle bg-yellow"></div>
 					<div class="p2-circle bg-yellow"></div>
 					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-orange p2-border"></div>
-					<div class="p2-circle bg-orange p2-border"></div>
+					<div id = "orangeborder1" class="p2-circle bg-orange p2-border"></div>
+					<div id = "orangeborder2" class="p2-circle bg-orange p2-border"></div>
 					<div class="p2-circle bg-orange"></div>
 					<div class="p2-circle bg-orange"></div>
 					<div class="p2-circle bg-orange"></div>
-					<div class="p2-circle bg-blue"></div>
+					<div  class="p2-circle bg-blue"></div>
 					<div class="p2-circle bg-blue"></div>
 					<div class="p2-circle bg-blue p2-border"></div>
 					<div class="p2-circle bg-blue p2-border"></div>
@@ -64,6 +64,43 @@
 
 <script type="text/javascript">
 	// your solution here
+  $(document).ready(() =>{
+     $( ".bg-purple" ).click(function() {
+           $(".bg-purple").hide();
+        });
+     $( ".bg-green").click(function() {
+           $( ".bg-green,.bg-blue" ).hide();
+        });
+    $( "#orangeborder1,#orangeborder2").click(function() {
+           $( "#orangeborder1,#orangeborder2").hide();
+        });
+    
+    $("#gradient-circle").hover(function(){
+        $("#gradient-circle").hide();
+    });
+    $("#button").click(function(){
+         $(".bg-purple,.bg-blue,#orangeborder1,#orangeborder2,#gradient-circle").show();
+        
+    }); 
+    
+
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }); 
 
 </script>
 </body>
